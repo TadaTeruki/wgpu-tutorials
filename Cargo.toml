@@ -1,11 +1,9 @@
-[package]
-name = "wgpu-chunks"
-version = "0.1.0"
-edition = "2021"
+[workspace]
 
-[dependencies]
+members = ["tutorial1_window"]
+
+[workspace.dependencies]
 log = "0.4.22"
 env_logger = "0.11.4"
 winit = "0.29.15"
 wgpu = "22.0.0"
-pollster = "0.3.0"

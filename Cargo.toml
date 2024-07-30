@@ -1,9 +1,20 @@
 [workspace]
 
 members = ["tutorial1_window"]
+resolver = "2"
 
 [workspace.dependencies]
+cfg-if = "1"
+console_error_panic_hook = "0.1.6"
+console_log = "1.0"
 log = "0.4.22"
 env_logger = "0.11.4"
 winit = "0.29.15"
-wgpu = "22.0.0"
+wgpu = { version = "22.0", features = ["webgl"]}
+wasm-bindgen = "0.2.92"
+wasm-bindgen-futures = "0.4.30"
+web-sys = { version = "0.3", features = [
+    "Document",
+    "Window",
+    "Element",
+]}

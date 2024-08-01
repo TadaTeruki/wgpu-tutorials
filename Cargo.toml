@@ -1,6 +1,6 @@
 [workspace]
 
-members = ["tutorial1_window"]
+members = ["tutorial1_window", "tutorial2_surface"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -18,3 +18,4 @@ web-sys = { version = "0.3", features = [
     "Window",
     "Element",
 ]}
+pollster = "0.3"

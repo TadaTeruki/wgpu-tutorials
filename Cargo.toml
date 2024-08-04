@@ -1,6 +1,6 @@
 [workspace]
 
-members = ["tutorial1_window", "tutorial2_surface", "tutorial3_pipeline", "tutorial4_buffer", "tutorial5_textures"]
+members = ["tutorial1_window", "tutorial2_surface", "tutorial3_pipeline", "tutorial4_buffer", "tutorial5_textures", "tutorial6_uniforms"]
 resolver = "2"
 
 [workspace.dependencies]
@@ -20,3 +20,4 @@ web-sys = { version = "0.3", features = [
 ]}
 pollster = "0.3"
 bytemuck = { version = "1.16", features = [ "derive" ] }
+cgmath = "0.18"

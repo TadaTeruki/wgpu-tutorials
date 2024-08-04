@@ -1,6 +1,6 @@
 [workspace]
 
-members = ["tutorial1_window", "tutorial2_surface", "tutorial3_pipeline", "tutorial4_buffer"]
+members = ["tutorial1_window", "tutorial2_surface", "tutorial3_pipeline", "tutorial4_buffer", "tutorial5_textures"]
 resolver = "2"
 
 [workspace.dependencies]

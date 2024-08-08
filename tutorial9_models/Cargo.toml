@@ -17,3 +17,7 @@ wgpu.workspace = true
 pollster.workspace = true
 bytemuck.workspace = true
 cgmath.workspace = true
+anyhow.workspace = true
+fs_extra.workspace = true
+glob.workspace = true
+tobj.workspace = true

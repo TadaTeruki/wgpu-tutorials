@@ -1709,6 +1709,21 @@ dependencies = [
 ]
 
 [[package]]
+name = "tutorial9_models"
+version = "0.1.0"
+dependencies = [
+ "bytemuck",
+ "cfg-if",
+ "cgmath",
+ "env_logger",
+ "image",
+ "log",
+ "pollster",
+ "wgpu",
+ "winit",
+]
+
+[[package]]
 name = "unicode-ident"
 version = "1.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"

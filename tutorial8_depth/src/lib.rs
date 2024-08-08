@@ -233,7 +233,7 @@ impl<'a> State<'a> {
             label: Some("diffuse_texture"),
             view_formats: &[],
         });
-        
+
         queue.write_texture(
             wgpu::ImageCopyTexture {
                 texture: &diffuse_texture,
@@ -345,8 +345,8 @@ impl<'a> State<'a> {
             label: Some("camera_bind_group"),
         });
 
-
-        let depth_texture = texture::Texture::create_depth_texture(&device, &config, "depth_texture");
+        let depth_texture =
+            texture::Texture::create_depth_texture(&device, &config, "depth_texture");
 
         let render_pipeline_layout =
             device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
@@ -387,7 +387,7 @@ impl<'a> State<'a> {
                 format: texture::Texture::DEPTH_FORMAT,
                 depth_write_enabled: true,
                 depth_compare: wgpu::CompareFunction::Less, // 1.
-                stencil: wgpu::StencilState::default(), // 2.
+                stencil: wgpu::StencilState::default(),     // 2.
                 bias: wgpu::DepthBiasState::default(),
             }),
             multisample: wgpu::MultisampleState {
@@ -431,7 +431,6 @@ impl<'a> State<'a> {
             usage: wgpu::BufferUsages::VERTEX | wgpu::BufferUsages::COPY_DST,
         });
 
-
         Self {
             surface,
             device,
@@ -460,13 +459,14 @@ impl<'a> State<'a> {
     }
 
     fn resize(&mut self, new_size: PhysicalSize<u32>) {
-        self.depth_texture = texture::Texture::create_depth_texture(&self.device, &self.config, "depth_texture");
         if new_size.width > 0 && new_size.height > 0 {
             self.size = new_size;
             self.config.width = new_size.width;
             self.config.height = new_size.height;
             self.surface.configure(&self.device, &self.config);
         }
+        self.depth_texture =
+            texture::Texture::create_depth_texture(&self.device, &self.config, "depth_texture");
     }
 
     fn input(&mut self, event: &WindowEvent) -> bool {
